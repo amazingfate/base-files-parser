@@ -35,16 +35,16 @@ def get_package_info_from_upstream(distro, pacakge_name):
                 package_file_release = item_class
                 package_file_version = item_text[1].split(":")[0]
                 if "arm64" in item_text[1].split(":")[1]:
-                    package_file_arm64_full_name = "/pool/main/b/base-files/base-files_" + package_file_version + "_arm64.deb"
+                    package_file_arm64_full_name = "/pool/main/" + pacakge_name[0] + "/" + pacakge_name + "/" + pacakge_name + "_" + package_file_version + "_arm64.deb"
                     debian_package_info["arm64"] = package_file_arm64_full_name
                 if "armhf" in item_text[1].split(":")[1]:
-                    package_file_armhf_full_name = "/pool/main/b/base-files/base-files_" + package_file_version + "_armhf.deb"
+                    package_file_armhf_full_name = "/pool/main/" + pacakge_name[0] + "/" + pacakge_name + "/" + pacakge_name + "_" + package_file_version + "_armhf.deb"
                     debian_package_info["armhf"] = package_file_armhf_full_name
                 if "amd64" in item_text[1].split(":")[1]:
-                    package_file_amd64_full_name = "/pool/main/b/base-files/base-files_" + package_file_version + "_amd64.deb"
+                    package_file_amd64_full_name = "/pool/main/" + pacakge_name[0] + "/" + pacakge_name + "/" + pacakge_name + "_" + package_file_version + "_amd64.deb"
                     debian_package_info["amd64"] = package_file_amd64_full_name
                 if "riscv64" in item_text[1].split(":")[1]:
-                    package_file_riscv64_full_name = "/pool/main/b/base-files/base-files_" + package_file_version + "_riscv64.deb"
+                    package_file_riscv64_full_name = "/pool/main/" + pacakge_name[0] + "/" + pacakge_name + "/" + pacakge_name + "_" + package_file_version + "_riscv64.deb"
                     debian_package_info["riscv64"] = package_file_riscv64_full_name
                 debian_all_package_info[item_class] = debian_package_info
         return debian_all_package_info
