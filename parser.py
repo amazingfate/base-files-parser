@@ -62,6 +62,7 @@ if debian_info and ubuntu_info:
     json_file_name = package_name + ".json"
     with open(json_file_name, "w") as outfile:
         json.dump(all_info_result, outfile)
+    print("parse.py has generated %s success with content %s" % (json_file_name, all_info_result))
 else:
     print("failed to get package info")
     sys.exit(1)
