@@ -24,7 +24,7 @@ jobs:
       # Step 3: Install dependencies (if you have any)
       - name: Install dependencies
         run: |
-          apt install python3-requests python3-lxml
+          sudo apt install -y python3-requests python3-lxml
 
       # Step 4: Run the Python script
       - name: Run parser script
